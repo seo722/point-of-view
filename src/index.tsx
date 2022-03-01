@@ -60,9 +60,9 @@ table {
 body {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
-  color: black;
+  color: #363332;
   line-height: 1.2;
-  background-color: powderblue;
+  background-color: #f6f3ea;
   overflow-x: hidden;
 }
 a {
