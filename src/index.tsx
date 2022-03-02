@@ -62,8 +62,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #363332;
   line-height: 1.2;
-  background-color: #f6f3ea;
+  background-color: powderblue;
   overflow-x: hidden;
+  height: 300vh;
+  margin-top: 300px;
 }
 a {
   text-decoration:none;
