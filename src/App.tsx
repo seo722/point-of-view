@@ -11,10 +11,10 @@ import ShoppingBag from "./Routes/ShoppingBag";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route path="/category" element={<Category />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/mypage" element={<MyPage />} />
