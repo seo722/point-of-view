@@ -59,13 +59,12 @@ table {
 }
 body {
   font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Georgia', sans-serif;
   color: #363332;
   line-height: 1.2;
-  background-color: powderblue;
+  background-color: rgba(246, 243, 234, 1);
   overflow-x: hidden;
   height: 300vh;
-  margin-top: 300px;
 }
 a {
   text-decoration:none;

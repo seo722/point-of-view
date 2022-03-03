@@ -1,7 +1,6 @@
 import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import {
   Col,
   Logo,
@@ -10,6 +9,7 @@ import {
   logoVar,
   Menu,
   menuVar,
+  MyPage,
   Nav,
   navVar,
   OneMenu,
@@ -64,14 +64,29 @@ function Header() {
             </Logo>
           </Link>
         </LogoBox>
+        <MyPage variants={menuVar} initial="top" animate={menuAnimation}>
+          <span>
+            <Link to="/login">LogIn</Link>
+          </span>
+          /
+          <span>
+            <Link to="/mypage"> My</Link>
+          </span>
+          /
+          <span>
+            <Link to="/shoppingbag"> Bag</Link>
+          </span>
+        </MyPage>
       </Col>
       <Col>
         <Menu variants={menuVar} initial="top" animate={menuAnimation}>
-          <OneMenu>ALL</OneMenu>
-          <OneMenu>NEW</OneMenu>
-          <OneMenu>WRITINGandDRAWING</OneMenu>
-          <OneMenu>PAGES</OneMenu>
-          <OneMenu>GIFT</OneMenu>
+          {["ALL", "NEW", "WRITINGandDRAWING", "PAGES", "GIFT"].map((menu) => {
+            return (
+              <OneMenu whileHover={{ textDecoration: "underline" }} key={menu}>
+                <Link to="/">{menu}</Link>
+              </OneMenu>
+            );
+          })}
         </Menu>
       </Col>
     </Nav>
