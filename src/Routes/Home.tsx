@@ -59,6 +59,7 @@ function Home<IPhoto>() {
 
   return (
     <>
+      {photo.slice}
       {photo.slice(index, index + 1).map((photo) => {
         return (
           <div style={{ position: "relative" }}>

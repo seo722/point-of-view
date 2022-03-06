@@ -45,8 +45,19 @@ export const Menu = styled(motion.div)`
   justify-content: space-evenly;
   margin: 0px 150px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 20px;
+  position: relative;
+  &:hover {
+    height: 60px;
+  }
+`;
+
+export const OneMenu = styled(motion.div)`
+  text-align: center;
+
+  position: relative;
+  width: 33%;
 `;
 
 export const MyPage = styled(motion.div)`
@@ -107,7 +118,20 @@ export const Circle = styled.div`
   }
 `;
 
-export const OneMenu = styled(motion.div)``;
+export const DetailMenu = styled(motion.div)`
+  // position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+`;
+
+export const DetailMenuWrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  width: 100%;
+  height: 30px;
+`;
 
 export const navVar = {
   top: { backgroundColor: "rgba(255,255,255,0)" },

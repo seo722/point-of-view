@@ -1,8 +1,10 @@
 import { motion, useAnimation, useViewportScroll } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MenuNavigaton from "./Menu";
 import {
   Col,
+  DetailMenu,
   Logo,
   LogoBox,
   logoBoxVar,
@@ -15,12 +17,48 @@ import {
   OneMenu,
 } from "./style";
 
+const menuNav = [
+  {
+    name1: "pages",
+    name2: ["book", "letter", "something", "some"],
+  },
+  {
+    name1: "good",
+    name2: ["good1", "good2", "good3"],
+  },
+  {
+    name1: "bad",
+    name2: ["bad2", "bad1", "bad3", "bad5"],
+  },
+];
+
+const detailMenuVar = {
+  enter: { display: "block" },
+  exit: { transitionEnd: { display: "none" } },
+};
+
 function Header() {
+  const [detailMenu1, setDetailMenu1] = useState(false);
+  const [detailMenu2, setDetailMenu2] = useState(false);
+  const [detailMenuBoolean, setDetailMenuBoolean] = useState(false);
+  const [detailMenuNumber, setDetailMenuNumber] = useState(0);
+
   const navAnimation = useAnimation();
   const logoAnimation = useAnimation();
   const menuAnimation = useAnimation();
   const borderAnimation = useAnimation();
   const { scrollY } = useViewportScroll();
+  const toggleMenu1 = () => {
+    if (menuNav[0]) {
+      setDetailMenuBoolean((prev) => !prev);
+      setDetailMenuNumber(0);
+    }
+    setDetailMenu1((prev) => !prev);
+  };
+  const toggleMenu2 = () => {
+    setDetailMenu2((prev) => !prev);
+  };
+
   useEffect(() => {
     scrollY.onChange(() => {
       if (scrollY.get() > 20) {
@@ -79,15 +117,7 @@ function Header() {
         </MyPage>
       </Col>
       <Col>
-        <Menu variants={menuVar} initial="top" animate={menuAnimation}>
-          {["ALL", "NEW", "WRITINGandDRAWING", "PAGES", "GIFT"].map((menu) => {
-            return (
-              <OneMenu whileHover={{ textDecoration: "underline" }} key={menu}>
-                <Link to="/">{menu}</Link>
-              </OneMenu>
-            );
-          })}
-        </Menu>
+        <MenuNavigaton />
       </Col>
     </Nav>
   );
