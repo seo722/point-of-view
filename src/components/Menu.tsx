@@ -20,21 +20,22 @@ import {
   Nav,
   navVar,
   OneMenu,
-} from "./style";
+} from "./styles";
 
 const menuNav = [
   {
     name1: "pages",
-    name2: ["book", "letter", "something", "some"],
+    name2: ["Notebook", "Diary & Planner", "Memo", "Others"],
   },
   {
     name1: "good",
-    name2: ["good1", "good2", "good3"],
+    name2: ["Pen & Pencil", "Paint", "Cut & paste", "Eraser", "Sharpener"],
   },
   {
     name1: "bad",
-    name2: ["bad2", "bad1", "bad3", "bad5"],
+    name2: ["Masking Tape", "Stamp", "Sticker", "Bookmark", "charm", "Others"],
   },
+  { name2: ["Letter", "Tag & Ribbon", "Decorative Things"] },
 ];
 
 const detailMenuVar = {
@@ -46,6 +47,7 @@ const MenuNavigaton = () => {
   const [detailMenu, setDetailMenu] = useState(false);
   const [detailMenu2, setDetailMenu2] = useState(false);
   const [detailMenu3, setDetailMenu3] = useState(false);
+  const [detailMenu4, setDetailMenu4] = useState(false);
 
   const toggleMenu = () => {
     setDetailMenu((prev) => !prev);
@@ -55,6 +57,9 @@ const MenuNavigaton = () => {
   };
   const toggleMenu3 = () => {
     setDetailMenu3((prev) => !prev);
+  };
+  const toggleMenu4 = () => {
+    setDetailMenu4((prev) => !prev);
   };
 
   const menuAnimation = useAnimation();
@@ -73,7 +78,7 @@ const MenuNavigaton = () => {
   return (
     <Menu variants={menuVar} initial="top" animate={menuAnimation}>
       <OneMenu onMouseEnter={toggleMenu} onMouseLeave={toggleMenu}>
-        ALL
+        <span>PAGES</span>
         {menuNav.slice(0, 1).map((m) => (
           <motion.div
             variants={detailMenuVar}
@@ -95,7 +100,7 @@ const MenuNavigaton = () => {
         ))}
       </OneMenu>
       <OneMenu onMouseEnter={toggleMenu2} onMouseLeave={toggleMenu2}>
-        good
+        <span>WRITING &#38; DRAWING</span>
         {menuNav.slice(1, 2).map((m) => (
           <motion.div
             variants={detailMenuVar}
@@ -117,12 +122,34 @@ const MenuNavigaton = () => {
         ))}
       </OneMenu>
       <OneMenu onMouseEnter={toggleMenu3} onMouseLeave={toggleMenu3}>
-        bad
+        <span>SMALL THINGS</span>
         {menuNav.slice(2, 3).map((m) => (
           <motion.div
             variants={detailMenuVar}
             initial="exit"
             animate={detailMenu3 ? "enter" : "exit"}
+          >
+            <DetailMenuWrapper>
+              {m.name2.map((men) => (
+                <DetailMenu
+                  whileHover={{
+                    textDecoration: "underline",
+                  }}
+                >
+                  <Link to="/">{men}</Link>
+                </DetailMenu>
+              ))}
+            </DetailMenuWrapper>
+          </motion.div>
+        ))}
+      </OneMenu>
+      <OneMenu onMouseEnter={toggleMenu4} onMouseLeave={toggleMenu4}>
+        <span>GIFT</span>
+        {menuNav.slice(3, 4).map((m) => (
+          <motion.div
+            variants={detailMenuVar}
+            initial="exit"
+            animate={detailMenu4 ? "enter" : "exit"}
           >
             <DetailMenuWrapper>
               {m.name2.map((men) => (

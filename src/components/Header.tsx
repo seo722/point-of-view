@@ -15,7 +15,7 @@ import {
   Nav,
   navVar,
   OneMenu,
-} from "./style";
+} from "./styles";
 
 const menuNav = [
   {

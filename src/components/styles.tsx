@@ -42,9 +42,9 @@ export const Logo = styled(motion.svg)`
 
 export const Menu = styled(motion.div)`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0px 150px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 20px;
   position: relative;
@@ -56,8 +56,11 @@ export const Menu = styled(motion.div)`
 export const OneMenu = styled(motion.div)`
   text-align: center;
 
-  position: relative;
-  width: 33%;
+  // position: relative;
+  width: 20%;
+  // span:hover {
+  //   text-decoration: underline;
+  // }
 `;
 
 export const MyPage = styled(motion.div)`
@@ -70,64 +73,20 @@ export const MyPage = styled(motion.div)`
   font-family: "Arial";
 `;
 
-export const SlideBtnWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-itmes: center;
-`;
-
-export const SlideBtn = styled(motion.div)`
-  top: 0px;
-  width: 44.5vw;
-  position: absolute;
-  font-size: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  &:first-child {
-    right: 0px;
-    justify-content: flex-end;
-    margin-right: 5vw;
-  }
-  &:last-child {
-    left: 0px;
-    margin-left: 5vw;
-  }
-`;
-
-export const CircleWrapper = styled.div`
-  width: 100%;
-  heigth: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: absolute;
-  top: 800px;
-`;
-
-export const Circle = styled.div`
-  width: 8px;
-  height: 8px;
-  border-radius: 5px;
-  background-color: black;
-  margin: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: white;
-  }
-`;
-
-export const DetailMenu = styled(motion.div)`
+export const DetailMenu = styled(motion.span)`
   // position: absolute;
   font-size: 15px;
   font-weight: 500;
+  margin: 0px 10px;
 `;
 
 export const DetailMenuWrapper = styled(motion.div)`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
   margin-top: 15px;
   width: 100%;
   height: 30px;

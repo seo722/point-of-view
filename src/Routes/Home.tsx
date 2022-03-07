@@ -1,42 +1,21 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
+
+import { itemPhoto, photo } from "../utils/pictures";
 import {
   Circle,
   CircleWrapper,
+  Item,
+  ItemWrapper,
+  MiddleTitle,
+  MiddleTitleWrapper,
+  NameNPrice,
+  rowVars,
   SlideBtn,
   SlideBtnWrapper,
-} from "../components/style";
-
-const Banner = styled.div<{ bgPhoto: string }>`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px;
-  background-image: url(${(props) => props.bgPhoto});
-  background-size: cover;
-`;
-
-export const rowVars = {
-  start: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-};
-
-const photo = [
-  { address: "http://pointofview.kr/images/promotion1.jpg" },
-  { address: "http://pointofview.kr/images/promotion2.jpg" },
-  { address: "http://pointofview.kr/images/promotion3.jpg" },
-  { address: "http://pointofview.kr/images/promotion4.jpg" },
-  { address: "http://pointofview.kr/images/promotion5.jpg" },
-];
+  UnderMiddleTItle,
+} from "./styles";
 
 interface IPhoto {
   address: string;
@@ -70,7 +49,7 @@ function Home<IPhoto>() {
                 initial="start"
                 animate={{
                   opacity: 1,
-                  transition: { type: "tween", duration: 1.5 },
+                  transition: { type: "tween", duration: 1 },
                 }}
                 exit="exit"
                 src={photo.address}
@@ -108,6 +87,29 @@ function Home<IPhoto>() {
                 );
               })}
             </CircleWrapper>
+            <MiddleTitleWrapper>
+              <MiddleTitle>recent arrivals</MiddleTitle>
+              <UnderMiddleTItle>
+                새로 업데이트 된 상품을 확인해 보세요!
+              </UnderMiddleTItle>
+            </MiddleTitleWrapper>
+            <ItemWrapper>
+              {itemPhoto.map((item) => (
+                <>
+                  <Item>
+                    <img src={item.address} alt="" />
+                    <NameNPrice>
+                      <span>{item.name}</span>
+                      <span>{item.price}원</span>
+                    </NameNPrice>
+                  </Item>
+                </>
+              ))}
+            </ItemWrapper>
+            <MiddleTitleWrapper>
+              <MiddleTitle>s.e.o recommend</MiddleTitle>
+              <UnderMiddleTItle>세오가 추천드리는 상품입니다.</UnderMiddleTItle>
+            </MiddleTitleWrapper>
           </div>
         );
       })}
