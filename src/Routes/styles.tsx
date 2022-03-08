@@ -49,12 +49,20 @@ export const Circle = styled.div`
   }
 `;
 
+export const UnderImgWrapper = styled.div`
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+`;
+
 export const MiddleTitleWrapper = styled.div`
+  width: 100%;
   margin-top: 150px;
   margin-bottom: 50px;
 `;
 
 export const MiddleTitle = styled.h1`
+  width: 100%;
   font-size: 16px;
   text-align: center;
   font-weight: 600;
@@ -76,7 +84,6 @@ export const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 3%;
 `;
 
 export const Item = styled.div`
@@ -86,9 +93,6 @@ export const Item = styled.div`
   }
   margin-left: 24px;
   margin-bottom: 25px;
-  &:first-child {
-    margin-left: 0;
-  }
 `;
 
 export const NameNPrice = styled.div`
@@ -104,6 +108,24 @@ export const NameNPrice = styled.div`
     letter-spacing: 0.5px;
     font-size: 15.5px;
   }
+`;
+
+export const ReccomendedItem = styled.div`
+  width: 48%;
+  img {
+    width: 100%;
+  }
+  &:last-child {
+    margin-left: 24px;
+  }
+  margin-bottom: 25px;
+`;
+
+export const RecommendedName = styled.span`
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-weight: 600;
 `;
 
 export const rowVars = {

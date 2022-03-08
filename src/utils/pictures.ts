@@ -52,8 +52,94 @@ export const itemPhoto = [
   },
   {
     address:
-      "http://pointofview.kr/web/product/medium/202112/50dced540f59653584a35ff47ba516d0.png",
-    name: "Writing hand pen stand brass",
-    price: "46,000",
+      "http://pointofview.kr/web/product/medium/202201/e6786f5e1f5854a9c556429166bf5507.png",
+    name: "Wooden Stamp set",
+    price: "35,000",
+  },
+];
+
+export const recommendedPhoto = [
+  {
+    address: "http://pointofview.kr/images/reco1.jpg",
+    name: "Notebook - EMILIO BRAGA",
+  },
+  {
+    address: "http://pointofview.kr/images/reco2.jpg",
+    name: "Greeting Card - SCRIBBLE & DAUB",
+  },
+];
+
+export const sliderPhoto = [
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202203/859a74aac53da517947d9e19e876c6f4.png",
+    name: "Notebook Petite Indienne",
+    price: "48,000",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202202/6650e5b4396b7e65a0577fd9a31ff1f5.png",
+    name: "Message card",
+    price: "2,900",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202101/f5d4485d201f6dc7e169bc9291c7f57f.png",
+    name: "Folding Ruler",
+    price: "19,000",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202012/e8a4d682c226339b79ccd7d2910816f3.png",
+    name: "Wooden Magner Mini Set(6pcs)",
+    price: "10,000",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202106/102ef856ec04eb2592ac29a003d76350.png",
+    name: "C.D. Notebook B5",
+    price: "3,200",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202109/3b52af8e683f259321ea50f664a413ca.png",
+    name: "Frixion ball slim 038",
+    price: "2,800",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202112/5fdedb26ab69dfb0b139292225ed458c.png",
+    name: "Mini greeting card Birthday bunting",
+    price: "5,000",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202012/9c20db0fac3299f1923a3a29915ad5ab.png",
+    name: "Liquid glue 88 25g",
+    price: "2,900",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202012/5de538708a85ad8175d12901f848e538.png",
+    name: "L-M03 Daily memo pad",
+    price: "10,500",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202107/85d2050f06f12b68231e3c0825fd04b5.png",
+    name: "Message card Hapy Birthday",
+    price: "5,000",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202012/63bc7f3d1fc3abfa403d5f2921c2ca25.png",
+    name: "Crystal ball",
+    price: "42,000",
+  },
+  {
+    address:
+      "http://pointofview.kr/web/product/medium/202012/cda19d3722824cf2727445cd77a1621e.png",
+    name: "Blackwing natural 2B",
+    price: "3,500",
   },
 ];
