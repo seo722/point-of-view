@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import Scrollbars from "react-custom-scrollbars";
 import styled from "styled-components";
+import Sliders from "../components/Sliders";
 
 import { itemPhoto, photo, recommendedPhoto } from "../utils/pictures";
 import {
@@ -134,7 +136,8 @@ function Home<IPhoto>() {
                   품절 후 재입고 된 인기 상품입니다.
                 </UnderMiddleTItle>
               </MiddleTitleWrapper>
-            </UnderImgWrapper>
+              <Sliders />
+            </UnderImgWrapper>{" "}
           </div>
         );
       })}

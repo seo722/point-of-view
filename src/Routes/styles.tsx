@@ -84,6 +84,7 @@ export const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 `;
 
 export const Item = styled.div`
