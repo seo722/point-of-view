@@ -38,26 +38,11 @@ const detailMenuVar = {
 };
 
 function Header() {
-  const [detailMenu1, setDetailMenu1] = useState(false);
-  const [detailMenu2, setDetailMenu2] = useState(false);
-  const [detailMenuBoolean, setDetailMenuBoolean] = useState(false);
-  const [detailMenuNumber, setDetailMenuNumber] = useState(0);
-
   const navAnimation = useAnimation();
   const logoAnimation = useAnimation();
   const menuAnimation = useAnimation();
   const borderAnimation = useAnimation();
   const { scrollY } = useViewportScroll();
-  const toggleMenu1 = () => {
-    if (menuNav[0]) {
-      setDetailMenuBoolean((prev) => !prev);
-      setDetailMenuNumber(0);
-    }
-    setDetailMenu1((prev) => !prev);
-  };
-  const toggleMenu2 = () => {
-    setDetailMenu2((prev) => !prev);
-  };
 
   useEffect(() => {
     scrollY.onChange(() => {

@@ -18,33 +18,31 @@ const Sliders = () => {
   const toggleLeaving = () => setLeaving((prev) => !prev);
 
   return (
-    <div>
-      <Slider>
-        <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
-          <Row
-            variants={rowVar}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ type: "tween", duration: 0.7 }}
-            key={index}
-          >
-            {sliderPhoto
-              .slice(offset * index, offset * index + offset)
-              .map((photo) => (
-                <Item>
-                  <img src={photo.address} alt={photo.name} />
-                  <NameNPrice>
-                    <span>{photo.name}</span>
-                    <span>{photo.price}원</span>
-                  </NameNPrice>
-                </Item>
-              ))}
-          </Row>
-        </AnimatePresence>
-        <NextButton onClick={() => increaseIndex()}></NextButton>
-      </Slider>
-    </div>
+    <Slider>
+      <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
+        <Row
+          variants={rowVar}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ type: "tween", duration: 0.7 }}
+          key={index}
+        >
+          {sliderPhoto
+            .slice(offset * index, offset * index + offset)
+            .map((photo) => (
+              <Item>
+                <img src={photo.address} alt={photo.name} />
+                <NameNPrice>
+                  <span>{photo.name}</span>
+                  <span>{photo.price}원</span>
+                </NameNPrice>
+              </Item>
+            ))}
+        </Row>
+      </AnimatePresence>
+      <NextButton onClick={() => increaseIndex()}></NextButton>
+    </Slider>
   );
 };
 

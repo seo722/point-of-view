@@ -143,3 +143,21 @@ export const sliderPhoto = [
     price: "3,500",
   },
 ];
+
+export const selectionPhoto = [
+  {
+    address: "http://pointofview.kr/images/s1.jpg",
+    name: "Inspiration & Object",
+    description: "오브제, 새로운 영감을 발견하는 통로가 됩니다.",
+  },
+  {
+    address: "http://pointofview.kr/images/s2.jpg",
+    name: "Writing & Drawing",
+    description: "문구란 이야기를 가공하는 가장 원초적인 도구입니다.",
+  },
+  {
+    address: "http://pointofview.kr/images/s3.jpg",
+    name: "Small things",
+    description: "때로는 작은 무언가가 모든 것을 이야기합니다.",
+  },
+];

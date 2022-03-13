@@ -53,6 +53,7 @@ export const UnderImgWrapper = styled.div`
   width: 100%;
   padding-left: 30px;
   padding-right: 30px;
+  // height: 700vh;
 `;
 
 export const MiddleTitleWrapper = styled.div`
@@ -140,3 +141,17 @@ export const rowVars = {
     opacity: 0,
   },
 };
+
+export const SelectionWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+`;
+
+export const SelectionItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 31.5%;
+  justify-content: center;
+`;

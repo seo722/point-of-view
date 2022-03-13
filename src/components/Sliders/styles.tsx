@@ -32,7 +32,10 @@ export const NameNPrice = styled.div`
 `;
 
 export const Slider = styled.div`
+  width: 100%;
+  height: 100%;
   position: relative;
+  display: block;
   h1 {
     margin-bottom: 20px;
     margin-left: 20px;

@@ -4,7 +4,12 @@ import Scrollbars from "react-custom-scrollbars";
 import styled from "styled-components";
 import Sliders from "../components/Sliders";
 
-import { itemPhoto, photo, recommendedPhoto } from "../utils/pictures";
+import {
+  itemPhoto,
+  photo,
+  recommendedPhoto,
+  selectionPhoto,
+} from "../utils/pictures";
 import {
   Circle,
   CircleWrapper,
@@ -16,6 +21,8 @@ import {
   ReccomendedItem,
   RecommendedName,
   rowVars,
+  SelectionItem,
+  SelectionWrapper,
   SlideBtn,
   SlideBtnWrapper,
   UnderImgWrapper,
@@ -137,7 +144,51 @@ function Home<IPhoto>() {
                 </UnderMiddleTItle>
               </MiddleTitleWrapper>
               <Sliders />
-            </UnderImgWrapper>{" "}
+              <MiddleTitleWrapper style={{ marginTop: "88vh" }}>
+                <MiddleTitle>shop in category</MiddleTitle>
+                <UnderMiddleTItle>
+                  포인트 오브 뷰의 다양한 셀렉션을 확인해 보세요.
+                </UnderMiddleTItle>
+              </MiddleTitleWrapper>
+              <SelectionWrapper>
+                {selectionPhoto.map((photo) => (
+                  <SelectionItem>
+                    <img src={photo.address} alt={photo.name} />
+                    <NameNPrice
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        textAlign: "center",
+                      }}
+                    >
+                      <span style={{ margin: "12px 0px", fontSize: "17px" }}>
+                        {photo.name}
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "Noto Serif KR",
+                          fontSize: "15px",
+                          fontWeight: 500,
+                        }}
+                      >
+                        {photo.description}
+                      </span>
+                    </NameNPrice>
+                  </SelectionItem>
+                ))}
+              </SelectionWrapper>
+              <MiddleTitleWrapper>
+                <MiddleTitle>point of view store</MiddleTitle>
+                <UnderMiddleTItle>
+                  기록하는 모든 것들을 위한 상점에 여러분을 초대합니다.
+                </UnderMiddleTItle>
+              </MiddleTitleWrapper>
+            </UnderImgWrapper>
+            <img
+              style={{ width: "100%" }}
+              src="http://pointofview.kr/images/about.jpg"
+              alt=""
+            />
           </div>
         );
       })}
