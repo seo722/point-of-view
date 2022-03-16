@@ -111,3 +111,39 @@ export const logoBoxVar = {
   top: { borderBottom: "none" },
   scroll: { borderBottom: "1px solid rgba(0,0,0,0.1)" },
 };
+
+export const FooterWrapper = styled.div`
+  height: 150px;
+  width: 100%
+  position: absolute;
+  bottom: 0;
+`;
+
+export const Top = styled.div`
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 200px;
+  margin: 0 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+`;
+
+export const TextWrapper = styled.div`
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const Bottom = styled.div`
+  height: 70px;
+  margin: 0 50px;
+  text-transform: uppercase;
+  font-family: "Arial";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
